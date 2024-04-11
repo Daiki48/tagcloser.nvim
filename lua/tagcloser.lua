@@ -1,6 +1,6 @@
 local M = {}
 
-vim.api.nvim_set_keymap('i', '>>', 'v:lua.autoclose_tag()', {expr = true, noremap = true})
+vim.api.nvim_set_keymap('i', '>>', '<cmd>lua require("tagcloser").autoclose_tag()<CR>', {expr = true, noremap = true})
 
 function M.autoclose_tag()
   local line = vim.api.nvim_get_current_line()
